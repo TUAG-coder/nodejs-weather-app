@@ -1,4 +1,4 @@
-// THIS IS THE CLIENT SIDE JS FILE
+// THIS IS THE CLIENT SIDE JS FILE //
 
 
 console.log("Client side JS is running");  // this will be visble in the console of the webpage
