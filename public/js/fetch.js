@@ -30,7 +30,9 @@ weatherForm.addEventListener('submit', (event) => {
     lineTwo.textContent = '';
     lineThree.textContent = '';
 
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+    // fetch('http://localhost:3000/weather?address=' + location)      (this command was there only for localhost)
+
+    fetch('/weather?address=' + location).then((response) => {
     response.json().then((data) => {
         if (data.Error) {                     // this object is being sent from app.js
             lineOne.textContent = data.Error;
