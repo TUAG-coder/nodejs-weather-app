@@ -50,65 +50,6 @@ table {
 		box-sizing: border-box;
 }
 
-/*
-body {
-	color: #333333;
-	font-family: arial;
-	max-width: 600px;
-	margin: 0 auto;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	border: 1px solid;
-}
-
-
-h1 {
- 	font-size: 80px;
-	padding: 20px 0;
-}
-
-.main-content {
-	flex-grow: 1;    /* to shift footer at the bottom 
-	margin-bottom: 20px;
-}
-
-.portrait {
-	width: 100%;
-	min-height: 400px;
-	padding: 20px 100px 0 100px;
-}
-
-header a{
-	color: #888888;
-	text-decoration: none;
-	display: inline-block;
-	padding: 0px 16px 20px 0;
-}
-
-input {
-	border: 1px solid #cccccc;
-	border-radius: 5px;
-	padding: 8px;
-}
-
-button {
-	cursor: pointer;
-	border: 1px solid #888888;
-	background: #888888;
-	color: white;
-	padding: 8px;
-}
-
-footer {
-	color: #888888;
-	border-top: 5px solid #888888;
-	padding-top: 20px;
-	margin: 20px 0;
-}
-*/
-
 
 body {
     font-family: arial;
