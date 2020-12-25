@@ -46,9 +46,9 @@ app.get('/about', (req, res) => {
   })
 })
 
-app.get('/weather', (req, res) => {
+app.get('/weather', (req, res) => {      // fetch() in fetch.js will trigger the "localhost:3000/weather?address=location" link 
 
-  if (!req.query.address) {
+  if (!req.query.address) {   // localhost:3000/weather?address=location
     return res.send({
       Error: 'Please provide address in the search box!'
     })
