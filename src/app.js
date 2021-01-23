@@ -14,18 +14,21 @@ const viewsPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
 
 // setup handlebars and views location
-app.set('view engine', 'hbs'); // telling express which tempplate engine to use
-app.set('views', viewsPath);
+// we setup handlebars coz we want to have dynamic web pages
+app.set('view engine', 'hbs'); // telling express which template engine to use
+app.set('views', viewsPath); // express looks only for "views" folder so we need to setup views directory manually
 
 // setup static directory to serve
-app.use(express.static(publicDirectoryPath));
+app.use(express.static(publicDirectoryPath)); // express.static returns a value which will be used by use()
 
 hbs.registerPartials(partialsPath);
 
 // setting up routes
+// with "render" we can render one of our views...since in this case we've configured express to use view engien hbs with render we can
+// render one of our handlebar templates.
 
 app.get('', (req, res) => {
-  res.render('index', {
+  res.render('index', {   // 1st argument will contain the name of the view
     title: 'Weather',
     name: 'Tushar Agarwal'
   })
@@ -34,7 +37,8 @@ app.get('', (req, res) => {
 app.get('/help', (req, res) => {
   res.render('help', {
     title: 'Help',
-    message: 'This is some helpful text',
+    message1: 'Need some help?',
+    message2: 'Help page soon will be fully functioning',
     name: 'Tushar Agarwal'
   })
 })

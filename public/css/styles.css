@@ -132,6 +132,10 @@ button {
 	padding: 5px;
 }
 
+.screen .details {
+	margin-top: 200px;
+}
+
 footer {
 	color: #888888;
 	border-top: 1px solid #888888;
