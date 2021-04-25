@@ -5,7 +5,8 @@ const hbs = require('hbs');   // to use hbs.registerPartials()
 const geocode = require('./utils/geocode.js');
 const forecast = require('./utils/forecast.js');
 
-const port = process.env.PORT || 3000;
+//as I'm hosting my application on Heroku, heroku can configure the PORT on which our server shpuld listen to as my script will be running on their environment
+const port = process.env.PORT || 3000;  
 
 
 // Define paths for Express config
@@ -19,7 +20,9 @@ app.set('view engine', 'hbs'); // telling express which template engine to use
 app.set('views', viewsPath); // express looks only for "views" folder so we need to setup views directory manually
 
 // setup static directory to serve
-app.use(express.static(publicDirectoryPath)); // express.static returns a value which will be used by use()
+//app.use() is used a middleware function to our Express app
+// express.static() is a built-in middleware to serve static files
+app.use(express.static(publicDirectoryPath));
 
 hbs.registerPartials(partialsPath);
 
@@ -27,6 +30,7 @@ hbs.registerPartials(partialsPath);
 // with "render" we can render one of our views...since in this case we've configured express to use view engien hbs with render we can
 // render one of our handlebar templates.
 
+//app.get() responds only to GET HTTP requests
 app.get('', (req, res) => {
   res.render('index', {   // 1st argument will contain the name of the view
     title: 'Weather',

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js" // we can use "npm run start" to run "node src/app.js"
   },
   "author": "",
   "license": "ISC",
