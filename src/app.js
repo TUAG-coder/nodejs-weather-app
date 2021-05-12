@@ -98,6 +98,6 @@ app.get('*', (req, res) => {
 
 
 
-app.listen(port, () => {                        // for starting up the server
+app.listen(port, () => {                        // to bind and listen the connections on the specified host and port
   console.log("Server is up on port " + port);
 })
